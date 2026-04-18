@@ -1,6 +1,3 @@
-FROM node:14
-WORKDIR /app
-COPY . .
-RUN npm install
-EXPOSE 85
-CMD ["npm", "start"]
+FROM nginx:latest
+COPY . /usr/share/nginx/html
+EXPOSE 80
