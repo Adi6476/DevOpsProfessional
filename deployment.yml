@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devopsprofessional
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: devopsprofessional
+
+  template:
+    metadata:
+      labels:
+        app: devopsprofessional
+
+    spec:
+      containers:
+      - name: devopsprofessional
+
+        image: adityadoc6476/devopsprofessional:v1
+
+        ports:
+        - containerPort: 80
